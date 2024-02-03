@@ -1,0 +1,17 @@
+<div class="container-fluid vh-100 row justify-content-center align-items-center m-0 p-0">
+    <div class="container col-10 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex flex-column justify-content-center align-items-center">
+        <div class="card-header container-fluid">
+            <ul class="nav nav-tabs card-header-tabs row">
+              <li class="nav-item col p-0">
+                <a class="nav-link" aria-current="true" [routerLink]="login" routerLinkActive="active">Login</a>
+              </li>
+              <li class="nav-item col p-0">
+                <a class="nav-link" [routerLink]="signup"  routerLinkActive="active">Signup</a>
+              </li>
+            </ul>
+          </div>
+        <div class="px-3 py-3 border rounded-bottom">
+            <router-outlet></router-outlet>
+        </div>
+</div>
+</div>
