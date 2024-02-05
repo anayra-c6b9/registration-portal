@@ -1,13 +1,13 @@
 
-        <form class="row">
+        <form class="row" (submit)="signup()">
             <!-- Email input -->
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"  [(ngModel)]="user_details.user_email" [ngModelOptions]="{standalone: true}" >
                 <label for="floatingInput" class="ms-2">Email address</label>
               </div>
             <!-- Password input -->
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" >
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  [(ngModel)]="user_details.user_email" [ngModelOptions]="{standalone: true}" >
                 <label for="floatingPassword" class="ms-2">Password</label>
               </div>    
           

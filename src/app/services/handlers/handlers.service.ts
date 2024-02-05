@@ -17,8 +17,11 @@ export class HandlersService {
 
   loginUser = (user_data: UserDetails) => {
     this.apiService.validateUser(user_data).then((res: any) => {
-      console.log("Login successful")
+      console.log(res)
       this.router.navigate(["/home"])
+    })
+    .catch((err: any) => {
+      console.log(err)
     })
   }
 }
