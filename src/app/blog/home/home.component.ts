@@ -12,7 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
   navigateToDocs() {
-    console.log(this.router)
-    // this.router.navigate(['/docs'])
+    // console.log(this.router)
+    this.router.navigate(['/docs'])
   }
 }
