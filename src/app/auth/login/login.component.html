@@ -1,13 +1,13 @@
 
-        <form class="row" (submit)="login()">
+        <form class="row" [formGroup]="loginControlGroup" (submit)="login()">
             <!-- Email input -->
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="user_details.user_email" [ngModelOptions]="{standalone: true}" >
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="user_email">
                 <label for="floatingInput" class="ms-2">Email address</label>
               </div>
             <!-- Password input -->
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="user_details.user_password" [ngModelOptions]="{standalone: true}" >
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="user_password">
                 <label for="floatingPassword" class="ms-2">Password</label>
               </div>
           
@@ -28,5 +28,5 @@
             </div>
           
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary w-auto ms-auto me-2">Log in</button>
+            <button type="submit" class="btn btn-primary w-auto ms-auto me-2" [disabled]="!loginControlGroup.valid">Log in</button>
           </form>

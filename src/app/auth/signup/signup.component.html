@@ -1,16 +1,16 @@
 
-        <form class="row" (submit)="signup()">
+        <form class="row" [formGroup]="signupControlGroup" (submit)="signup()">
             <!-- Email input -->
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"  [(ngModel)]="user_details.user_email" [ngModelOptions]="{standalone: true}" >
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"  formControlName="user_email">
                 <label for="floatingInput" class="ms-2">Email address</label>
               </div>
             <!-- Password input -->
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  [(ngModel)]="user_details.user_email" [ngModelOptions]="{standalone: true}" >
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password"  formControlName="user_password">
                 <label for="floatingPassword" class="ms-2">Password</label>
               </div>    
           
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary w-auto ms-auto me-2 mt-4">Sign up</button>
+            <button type="submit" class="btn btn-primary w-auto ms-auto me-2 mt-4" [disabled]="!signupControlGroup.valid">Sign up</button>
           </form>
